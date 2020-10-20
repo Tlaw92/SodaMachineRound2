@@ -8,5 +8,16 @@ namespace SodaMachine2
 {
     class Simulation
     {
+        //Variables (Has a)
+        public SodaMachine sodaMachine;
+        public Customer customer;
+
+        //Constructor (Initial Values)
+        public Simulation()
+        {
+
+        }
+
+        //Member Methods
     }
 }
