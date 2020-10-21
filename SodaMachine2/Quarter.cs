@@ -8,5 +8,16 @@ namespace SodaMachine2
 {
     class Quarter : Coin
     {
+        //Variables (Has a)
+
+
+        //Constructor (Initial Values)
+        public Quarter()
+        {
+            Name = "Quarter";
+            value = 25;
+        }
+
+        //Member Methods
     }
 }

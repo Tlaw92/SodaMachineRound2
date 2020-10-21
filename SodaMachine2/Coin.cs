@@ -9,17 +9,9 @@ namespace SodaMachine2
     abstract class Coin
     {
         //Variables (Has a)
-        public string name; 
-        protected double value;
-
-        public double Value
-        {
-            get
-            {
-                return value;
-            }
-        }
-        
+        public string Name; 
+        protected int value;
+        public int Value { get { return value; } }
 
         //Constructor (Initial Values)
 

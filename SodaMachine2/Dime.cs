@@ -8,5 +8,16 @@ namespace SodaMachine2
 {
     class Dime : Coin
     {
+        //Variables (Has a)
+
+
+        //Constructor (Initial Values)
+        public Dime()
+        {
+            Name = "Dime";
+            value = 10;
+        }
+
+        //Member Methods
     }
 }

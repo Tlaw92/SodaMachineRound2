@@ -8,5 +8,15 @@ namespace SodaMachine2
 {
     class Penny : Coin
     {
+        //Variables (Has a)
+
+        //Constructor (Initial Values)
+        public Penny()
+        {
+            Name = "Quarter";
+            value = 1;
+        }
+
+        //Member Methods
     }
 }
