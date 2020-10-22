@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;w
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SodaMachine2
@@ -11,38 +11,49 @@ namespace SodaMachine2
         //Variables (Has a)
         public List<Coin> coins;
         public Card card;
-        public List<Quarter> quartersList;
-        public List<Dime> dimeList;
-        public List<Nickle> nickleList;
-        public List<Penny> pennyList;
-
 
         //Constructor (Initial Values)
-        public Wallet() //Wallet should start out with $5 in change
+        public Wallet() 
         {
             coins = new List<Coin>();
-            quartersList = new List<Quarter>();
-            AddCoins(4, quartersList);
-            
+            AddCoins(8, "Quarter");
+            AddCoins(20, "Dime");
+            AddCoins(10, "Nickle");
+            AddCoins(50, "Penny");
         }
 
         //Member Methods
-        public void AddCoins(int numberOfCoins, List<Quarter> listOfQuarters) 
-        {
-            CashRegister.AddCoinToList(numberOfCoins, listOfQuarters);
-        }
 
-        public void AddCoins(int numberOfCoins, List<Dime> coins) //one parameter is int 2nd is 
+        public void AddCoins(int number, string coinType)
         {
-            //
-        }
-        public void AddCoins(int numberOfCoins, List<Nickle> coins) //one parameter is int 2nd is 
-        {
-            //
-        }
-        public void AddCoins(int numberOfCoins, List<Penny> coins) //one parameter is int 2nd is 
-        {
-            //
+            if(coinType == "Quarter")
+            {
+                for (int i = 0; i < number; i++)
+                {
+                    coins.Add(new Quarter());
+                }
+            }
+            else if(coinType == "Dime")
+            {
+                for (int i = 0; i < number; i++)
+                {
+                    coins.Add(new Dime());
+                }
+            }
+            else if (coinType == "Nickle")
+            {
+                for (int i = 0; i < number; i++)
+                {
+                    coins.Add(new Nickle());
+                }
+            }
+            else if (coinType == "Penny")
+            {
+                for (int i = 0; i < number; i++)
+                {
+                    coins.Add(new Penny());
+                }
+            }
         }
     }
 }
