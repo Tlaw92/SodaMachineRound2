@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,9 +90,28 @@ namespace SodaMachine2
 
         //acceptpayment method
         //takes list of coins and decides what to do next( disepense, not enough, too much)
-        public void AcceptPayment()
-        {
+        //public void AcceptPayment(List<Coin> payment)
+        //{
+        //    int totalPaymentValue = CalculatePayment(payment);
+        //    if (totalPaymentValue > //price of soda)
+        //    {
+        //        //add soda to backpack
+        //    }
+        //    else
+        //    {
+        //        //send change back to customer/wallet
+        //    }
 
+        //}
+
+        public int CalculatePayment(List<Coin> payment)
+        {
+            int totalvalue = 0;
+            for (int i = 0; i < payment.Count; i++)
+            {
+                totalvalue += payment[i].Value;
+            }
+            return totalvalue;
         }
     }
 }

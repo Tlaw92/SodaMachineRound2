@@ -24,12 +24,15 @@ namespace SodaMachine2
 
         public List<Coin> GatherCoins()
         {
+            UserInterface.WelcomeOptions();
+            UserInterface.ChooseSoda();
             List<Coin> payment = new List<Coin>();
             while (true)
             {
-                Console.WriteLine("Which coin would you like to insert?");
-                Console.WriteLine("Press 1 for Quarter \nPress 2 for Dime \n Press 3 for Nickle" +
-                    "Press 4 for Penny \n And press 5 after finished");
+                Console.WriteLine("\nInsert coins one at a time.");
+                Console.WriteLine("Which coin would you like to insert?\n");
+                Console.WriteLine("Press 1 for Quarter \nPress 2 for Dime \nPress 3 for Nickle\n" +
+                    "Press 4 for Penny \nAnd type 5 after finished");
                 string coinChoice = Console.ReadLine();
 
                 switch (coinChoice)
@@ -51,6 +54,7 @@ namespace SodaMachine2
                     default:
                         break;
                 }
+                //If Payment is 
                 
             }
         }
@@ -69,12 +73,9 @@ namespace SodaMachine2
         public void ChooseSoda()
         {
             //ChooseSoda()
+            UserInterface.ChooseSoda();
         }
 
-        public void ChooseCans()
-        {
-
-        }
 
 
         //public void InsertCoin()
