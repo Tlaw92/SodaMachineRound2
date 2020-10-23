@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,7 @@ namespace SodaMachine2
         //Variables (Has a)
         public Wallet wallet;
         public Backpack backpack;
+        public List<Coin> payment;
 
 
         //Constructor (Initial Values)
@@ -18,6 +20,7 @@ namespace SodaMachine2
         {
             wallet = new Wallet();
             backpack = new Backpack();
+            List<Coin> payment = new List<Coin>();
         }
 
         //Member Methods
@@ -26,7 +29,7 @@ namespace SodaMachine2
         {
             UserInterface.WelcomeOptions();
             UserInterface.ChooseSoda();
-            List<Coin> payment = new List<Coin>();
+            
             while (true)
             {
                 Console.WriteLine("\nInsert coins one at a time.");
@@ -53,11 +56,29 @@ namespace SodaMachine2
                         return payment;
                     default:
                         break;
-                }
-                //If Payment is 
-                
+                }  
             }
         }
+
+        public int PaymentTotal(List<Coin> payment)
+        {
+            int paymentTotal = 0;
+            foreach (Coin coin in payment)
+	        {
+                paymentTotal += coin.Value;
+	        }
+            return paymentTotal;
+        }
+
+        public bool PaymentCheck(int x, int PaymentTotal)
+        {
+            if (x == PaymentTotal)
+            {
+                Console.WriteLine("Payment Sucessful");
+            }
+            return true;
+        }2
+
         public void FindCoin(string coinName, List<Coin> payment)
         {
             for (int i = 0; i < wallet.coins.Count; i++)

@@ -24,7 +24,7 @@ namespace SodaMachine2
                 "****                          ****\n" +
                 "****   Root Beer - 60 cents   ****\n" +
                 "****      Cola - 35 cents     ****\n" +
-                "****  Orange Soda - 6 cents   **** \n" +
+                "****  Orange Soda - 6 cents   ****\n" +
                 "****                          ****\n" +
                 "**********************************\n");
         }
